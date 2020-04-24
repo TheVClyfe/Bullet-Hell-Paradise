@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileFiringPeriod = 0.05f;
 
+    //need to add coroutine 
     Coroutine firingCoroutine;
 
     float xMin;

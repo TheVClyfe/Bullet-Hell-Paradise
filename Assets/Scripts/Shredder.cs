@@ -6,6 +6,7 @@ public class Shredder : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        //gotta destroy 'em all
         Destroy(collider.gameObject);
     }
 }
