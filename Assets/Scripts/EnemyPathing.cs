@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
     //Reference/Configuration Params for waypoints
-    [SerializeField] WaveConfig waveConfig;
+    WaveConfig waveConfig;
     [SerializeField] List<Transform> waypoints;
 
     //basically denotes which waypoint we're working towards on the path
