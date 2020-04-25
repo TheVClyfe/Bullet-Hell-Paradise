@@ -7,7 +7,6 @@ public class EnemyPathing : MonoBehaviour
     //Reference/Configuration Params for waypoints
     [SerializeField] WaveConfig waveConfig;
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] float moveSpeed = 2f;
 
     //basically denotes which waypoint we're working towards on the path
     int waypointIndex = 0;
@@ -25,12 +24,16 @@ public class EnemyPathing : MonoBehaviour
         Move();
     }
 
+    public void SetWaveConfig(WaveConfig waveConfig) {
+        this.waveConfig = waveConfig;
+    }
+
     private void Move()
     {
         if (waypointIndex <= waypoints.Count - 1)
         {
             var targetPostion = waypoints[waypointIndex].position;
-            var movementThisFrame = moveSpeed * Time.deltaTime;
+            var movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(
                 transform.position,
                 targetPostion,

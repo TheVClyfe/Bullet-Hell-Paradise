@@ -96,4 +96,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveConfig: {fileID: 11400000, guid: 4f71551f4f9dcb64996fce9e5770c309, type: 2}
   waypoints: []
-  moveSpeed: 2
+  moveSpeed: 5
