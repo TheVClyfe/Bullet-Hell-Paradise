@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5492798458678336726}
   - component: {fileID: 5492798458678336721}
   - component: {fileID: 4967300710908650268}
+  - component: {fileID: -1947788315896078318}
+  - component: {fileID: -1172180865403570225}
   m_Layer: 0
   m_Name: EnemyO
   m_TagString: Untagged
@@ -94,6 +96,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464d0f3289fb955418a4939f2e0d2b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 58db4a190e8ab5b4880bb602d470fba8, type: 2}
   waypoints: []
-  moveSpeed: 2
+--- !u!58 &-1947788315896078318
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492798458678336720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.014867246}
+  serializedVersion: 2
+  m_Radius: 0.43292022
+--- !u!114 &-1172180865403570225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492798458678336720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfad56510453b5f409bfde6a6f449eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  laserPrefab: {fileID: 1444501900533360409, guid: d495d14cab2bec94d8591434574ee9f9,
+    type: 3}
+  projectileSpeed: 15
