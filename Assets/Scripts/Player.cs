@@ -103,8 +103,13 @@ public class Player : MonoBehaviour
         health-= damageDealer.GetDamage();
         damageDealer.Hit();
         if(health <= 0) {
-           Destroy(gameObject);
-           AudioSource.PlayClipAtPoint(dyingAudio, Camera.main.transform.position, deathSoundVolume);
+           Die();
         }
+    }
+
+    private void Die() {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(dyingAudio, Camera.main.transform.position, deathSoundVolume);
+        FindObjectOfType<LevelManager>().LoadGameOverScene();
     }
 }
