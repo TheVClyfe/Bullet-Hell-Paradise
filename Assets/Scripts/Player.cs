@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     [Header("Audio Handler")]
     [SerializeField] AudioClip shootingAudio;
     [SerializeField] AudioClip dyingAudio;
+    [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.75f;
+    [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.75f;
 
     //need to add coroutine 
     Coroutine firingCoroutine;
@@ -63,7 +65,7 @@ public class Player : MonoBehaviour
                 transform.position,
                 Quaternion.identity) as GameObject;
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
-            AudioSource.PlayClipAtPoint(shootingAudio, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(shootingAudio, Camera.main.transform.position, shootSoundVolume);
             yield return new WaitForSeconds(projectileFiringPeriod);
         }        
     }
@@ -102,7 +104,7 @@ public class Player : MonoBehaviour
         damageDealer.Hit();
         if(health <= 0) {
            Destroy(gameObject);
-           AudioSource.PlayClipAtPoint(dyingAudio, Camera.main.transform.position);
+           AudioSource.PlayClipAtPoint(dyingAudio, Camera.main.transform.position, deathSoundVolume);
         }
     }
 }

@@ -137,3 +137,5 @@ MonoBehaviour:
   durationOfExplosion: 1
   shootingAudio: {fileID: 8300000, guid: 114b64f58a04222488ae73030587afe5, type: 3}
   dyingAudio: {fileID: 8300000, guid: 7bb33dfb3f42a0b4d8449a99e79944ae, type: 3}
+  deathSoundVolume: 0.314
+  shootSoundVolume: 0.309
