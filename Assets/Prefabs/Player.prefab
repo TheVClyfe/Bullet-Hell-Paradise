@@ -102,6 +102,8 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 10
   projectileFiringPeriod: 0.05
+  shootingAudio: {fileID: 8300000, guid: 516a064c76c27ce488969bfd0c636190, type: 3}
+  dyingAudio: {fileID: 8300000, guid: 8233e097af68de044b4c4c7cd37e4378, type: 3}
 --- !u!60 &376406842419521562
 PolygonCollider2D:
   m_ObjectHideFlags: 0

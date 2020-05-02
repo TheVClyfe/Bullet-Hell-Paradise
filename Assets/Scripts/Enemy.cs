@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{
+{   
+    //configuration params
     [SerializeField] float health = 100;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
@@ -12,6 +13,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] float projectileSpeed = 15f;
     [SerializeField] GameObject particleEffect;
     [SerializeField] float durationOfExplosion = 1f;
+
+    //Reference params
+    [SerializeField] AudioClip shootingAudio;
+    [SerializeField] AudioClip dyingAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +44,7 @@ public class Enemy : MonoBehaviour
             transform.position, 
             Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
+        AudioSource.PlayClipAtPoint(shootingAudio, Camera.main.transform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D otherObject)
@@ -70,6 +76,7 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(dyingAudio, Camera.main.transform.position);
         TriggerExplosionEffect();
     }
 }

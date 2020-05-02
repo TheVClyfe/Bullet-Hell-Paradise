@@ -134,3 +134,6 @@ MonoBehaviour:
   projectileSpeed: 15
   particleEffect: {fileID: 2457607050368642820, guid: c3bb55b2ccaf17842831ce59bfe1e808,
     type: 3}
+  durationOfExplosion: 1
+  shootingAudio: {fileID: 8300000, guid: 114b64f58a04222488ae73030587afe5, type: 3}
+  dyingAudio: {fileID: 8300000, guid: 7bb33dfb3f42a0b4d8449a99e79944ae, type: 3}
