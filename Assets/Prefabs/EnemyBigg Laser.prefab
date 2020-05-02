@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3854315745986436448}
   - component: {fileID: -7536588443549050229}
   m_Layer: 11
-  m_Name: EnemyLaser
+  m_Name: EnemyBigg Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -2128222913
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34ce471f43610ae4996958d865f3f66b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7eeed8a205e3796409f64b14efcfd6b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327f3fd1f781b6f439c3f5b4826ab5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 100
 --- !u!60 &-7536588443549050229
 PolygonCollider2D:
   m_ObjectHideFlags: 0
