@@ -9,13 +9,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] float health = 100;
     [SerializeField] int scoreValue = 500;
     [Header("Projectile Properties")]
-    [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 15f;
     [SerializeField] GameObject particleEffect;
     [SerializeField] float durationOfExplosion = 1f;
+    float shotCounter;
 
     //Reference params
     [Header("Audio Handling")]
