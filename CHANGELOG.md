@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]  
+BHP-14: Added spin for bigg enemy lasers.  
 BHP-13: Added Bigg Enemy, Classifies Sorting Layer as Projectiles.    
 BHP-12: Added HealthDisplay, ScoreDisplay.  
 BHP-11: Adds BG Music, with Start/Game Over Scenes.  
