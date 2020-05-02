@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2975703176095633557}
   - component: {fileID: -3854315745986436448}
   - component: {fileID: -7536588443549050229}
+  - component: {fileID: -4855908359298473728}
   m_Layer: 11
   m_Name: EnemyBigg Laser
   m_TagString: Untagged
@@ -161,3 +162,16 @@ PolygonCollider2D:
       - {x: 0.06774391, y: -0.058719352}
       - {x: 0.2310976, y: -0.03332316}
       - {x: 0.24, y: 0.026646294}
+--- !u!114 &-4855908359298473728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444501900533360409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06613de3ce8ec84e8ae7a8230eede81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfSpin: 360
