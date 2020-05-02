@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetUpMoveBoundaries();
+        FindObjectOfType<GameSession>().SetHealth(health);
     }
 
     // Update is called once per frame
@@ -101,6 +102,7 @@ public class Player : MonoBehaviour
 
     private void ProcessHit(DamageDealer damageDealer) {
         health-= damageDealer.GetDamage();
+        FindObjectOfType<GameSession>().SetHealth(health);
         damageDealer.Hit();
         if(health <= 0) {
            Die();

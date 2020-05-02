@@ -5,7 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {   
     //configuration params
+    [Header("Enemy Stats")]
     [SerializeField] float health = 100;
+    [SerializeField] int scoreValue = 500;
+    [Header("Projectile Properties")]
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -78,6 +81,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(dyingAudio, Camera.main.transform.position, deathSoundVolume);
         TriggerExplosionEffect();
