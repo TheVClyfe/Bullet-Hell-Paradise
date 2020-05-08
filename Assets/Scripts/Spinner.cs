@@ -8,6 +8,7 @@ public class Spinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //yolo
         transform.Rotate(new Vector3(0, 0, speedOfSpin * Time.deltaTime));
     }
 }

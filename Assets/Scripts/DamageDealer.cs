@@ -8,6 +8,7 @@ public class DamageDealer : MonoBehaviour
 
     public int GetDamage()
     {
+        //this is a test
         return damage;
     }
 
